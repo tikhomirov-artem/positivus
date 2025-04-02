@@ -1,3 +1,30 @@
+@charset "UTF-8";
+:root {
+  /*colors*/
+  --c-main: #B9FF66;
+  --c-black: black;
+  --c-dark: #191A23;
+  --c-dark-alt: #292A32;
+  --c-gray: #F3F3F3;
+  --c-grey-alt: #898989;
+  --c-light: white;
+  /*border radiuses*/
+  --b-radius-s: 8px;
+  --b-radius-m: 14px;
+  --b-radius-l: 45px;
+  --font-base: "Space Grotesk", sans-serif;
+  /*containers*/
+  --container-width: 1234px;
+  --container-padding-x: 20px;
+  --section-padding-y: 70px;
+  --border: 1px solid #191A23;
+  /*button and input heights*/
+  --btn-height: 68px;
+  --input-height: 59px;
+  /*optimal transition-duration*/
+  --trans-duration: 0.25s;
+}
+
 /**
   Нормализация блочной модели
  */
@@ -61,7 +88,6 @@ body,
   */
 p {
   --paragraphMarginBottom: 24px;
-
   margin-block: 0;
 }
 
@@ -159,7 +185,7 @@ label {
    (за исключением тех, у которых уже указан
    атрибут fill со значением 'none' или начинается с 'url')
   */
-:where([fill]:not([fill="none"], [fill^="url"])) {
+:where([fill]:not([fill=none], [fill^=url])) {
   fill: currentColor;
 }
 
@@ -168,7 +194,7 @@ label {
    (за исключением тех, у которых уже указан
    атрибут stroke со значением 'none')
   */
-:where([stroke]:not([stroke="none"], [stroke^="url"])) {
+:where([stroke]:not([stroke=none], [stroke^=url])) {
   stroke: currentColor;
 }
 
@@ -201,3 +227,20 @@ svg * {
     scroll-behavior: auto !important;
   }
 }
+/*Делаем гибкий текст с динамическим изменением размером шрифта*/
+/*Флекс-центрирование*/
+/*Абсолютное центрирование*/
+@font-face {
+  font-family: "Space Grotesk";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/SpaceGrotesk-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Space Grotesk";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/SpaceGrotesk-Medium.woff2") format("woff2");
+}/*# sourceMappingURL=styles.css.map */
