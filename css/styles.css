@@ -343,6 +343,72 @@ h4 {
   background-color: var(--c-black);
 }
 
+.menu-window {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+.menu-window:modal {
+  max-width: 100%;
+  max-height: 100%;
+}
+.menu-window__inner {
+  transition: var(--trans-duration) translate;
+  translate: 0 -100vh;
+  height: 100%;
+  padding-block: 20px;
+  width: 100%;
+  background-color: var(--c-light);
+  display: flex;
+  flex-direction: column;
+}
+.menu-window__inner--opened {
+  translate: 0;
+}
+.menu-window__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0.7;
+  font-size: var(--fz-link);
+}
+.menu-window__menu-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.menu-window__close-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu-window__close-button {
+  height: 48px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.menu-window__close-button::before, .menu-window__close-button::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: calc(100% - 18px);
+  border-radius: 4px;
+  background-color: var(--c-black);
+}
+.menu-window__close-button::before {
+  rotate: 45deg;
+}
+.menu-window__close-button::after {
+  rotate: -45deg;
+}
+
 .header {
   padding-top: 40px;
 }

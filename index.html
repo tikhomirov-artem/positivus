@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="css/styles.css">
     <title>Positivus</title>
 </head>
+
 <body>
     <header class="header">
         <div class="header-inner container">
@@ -34,7 +37,8 @@
             <button type="button" class="header__button button button--transparent hidden-mobile">
                 Request a quote
             </button>
-            <button type="button" class="header__burger-button burger-button visible-mobile">
+            <button id="menuWindowOpen" onclick="menuWindow.showModal()" type="button"
+                class="header__burger-button burger-button visible-mobile">
                 <span class="visually-hidden">Open navigation menu</span>
                 <span></span>
                 <span></span>
@@ -43,14 +47,36 @@
 
         </div>
     </header>
-    <dialog class="menu-window">
+    <dialog id="menuWindow" class="menu-window">
         <div class="menu-window__inner container">
-            <form method="dialog" class="menu-window__close-wrapper">
-                <button class="menu-window__close-button button">
-                    close
+            <div class="menu-window__close-wrapper">
+                <button id="menuWindowClose" type="" class="menu-window__close-button">
+                    <span></span>
+                    <span></span>
                 </button>
-            </form>    
+            </div>
+            <nav class="menu-window__menu">
+                <ul class="menu-window__menu-list">
+                    <li class="menu-window__menu-item">
+                        <a href="#" class="menu-window__menu-link">About us</a>
+                    </li>
+                    <li class="menu-window__menu-item">
+                        <a href="#" class="menu-window__menu-link">Services</a>
+                    </li>
+                    <li class="menu-window__menu-item">
+                        <a href="#" class="menu-window__menu-link">Use Cases</a>
+                    </li>
+                    <li class="menu-window__menu-item">
+                        <a href="#" class="menu-window__menu-link">Pricing</a>
+                    </li>
+                    <li class="menu-window__menu-item">
+                        <a href="#" class="menu-window__menu-link">Blog</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </dialog>
+    <script src="js/menu-window.js"></script>
 </body>
+
 </html>
