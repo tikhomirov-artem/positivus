@@ -1,0 +1,17 @@
+.welcome {
+    
+    &__main {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__content {
+        max-width: 531px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 35px;
+        align-items: start;
+    }
+    &__description {
+        font-size: var(--fz-link);
+    }
+}

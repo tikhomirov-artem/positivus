@@ -159,7 +159,7 @@ label {
    (за исключением тех, у которых уже указан
    атрибут fill со значением 'none' или начинается с 'url')
   */
-:where([fill]:not([fill="none"], [fill^="url"])) {
+svg:not([class]) :where([fill]:not([fill="none"], [fill^="url"])) {
   fill: currentColor;
 }
 

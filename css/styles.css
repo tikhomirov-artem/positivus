@@ -159,7 +159,7 @@ label {
    (за исключением тех, у которых уже указан
    атрибут fill со значением 'none' или начинается с 'url')
   */
-:where([fill]:not([fill=none], [fill^=url])) {
+svg:not([class]) :where([fill]:not([fill=none], [fill^=url])) {
   fill: currentColor;
 }
 
@@ -280,7 +280,7 @@ body {
   font-size: clamp(16px, 1.25vw, 18px);
   font-family: var(--font-base);
   font-weight: 400;
-  line-height: 1.28;
+  line-height: 1.4;
   background-color: var(--c-light);
   color: var(--c-black);
 }
@@ -295,6 +295,7 @@ svg * {
 
 h1, h2, h3, h4 {
   font-weight: 500;
+  line-height: 1.08;
 }
 
 h1 {
@@ -341,6 +342,25 @@ h4 {
   width: 100%;
   border-radius: 4px;
   background-color: var(--c-black);
+}
+
+.section {
+  padding-block: var(--section-padding-y);
+}
+
+.welcome__main {
+  display: flex;
+  justify-content: space-between;
+}
+.welcome__content {
+  max-width: 531px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+  align-items: start;
+}
+.welcome__description {
+  font-size: var(--fz-link);
 }
 
 .menu-window {
