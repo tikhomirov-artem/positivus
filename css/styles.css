@@ -326,6 +326,10 @@ h4 {
   border: var(--border);
   font-size: var(--fz-link);
 }
+.button--transparent {
+  color: var(--c-dark);
+  background-color: transparent;
+}
 
 .burger-button {
   height: 48px;
@@ -348,6 +352,11 @@ h4 {
   padding-block: var(--section-padding-y);
 }
 
+.welcome {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--section-padding-y);
+}
 .welcome__main {
   display: flex;
   justify-content: space-between;
@@ -361,6 +370,13 @@ h4 {
 }
 .welcome__description {
   font-size: var(--fz-link);
+}
+.welcome__partners {
+  max-width: 100%;
+  /*sas*/
+}
+.welcome__partners-item {
+  max-width: fit-content;
 }
 
 .menu-window {

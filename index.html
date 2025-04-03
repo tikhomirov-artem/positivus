@@ -6,6 +6,8 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script src="./js/swiper-bundle.min.js"></script>
     <title>Positivus</title>
 </head>
 
@@ -50,8 +52,8 @@
     <main class="content">
         <section class="section">
             <div class="section__body">
-                <div class="welcome">
-                    <div class="welcome__main container">
+                <div class="welcome container">
+                    <div class="welcome__main">
                         <div class="welcome__content">
                             <h1 class="welcome__title">Navigating the digital landscape for success</h1>
                             <div class="welcome__description">
@@ -191,8 +193,27 @@
 
 
                     </div>
-                    <div class="welcome__partners">
-
+                    <div class="welcome__partners swiper">
+                        <div class="swiper-wrapper">
+                            <div class="welcome__partners-item swiper-slide">
+                                <img src="./images/partners/amazon.svg" width="124" height="48" alt="">
+                            </div>
+                            <div class="welcome__partners-item swiper-slide">
+                                <img src="./images/partners/dribbble.svg" width="124" height="48" alt="">
+                            </div>
+                            <div class="welcome__partners-item swiper-slide">
+                                <img src="./images/partners/hubspot.svg" width="124" height="48" alt="">
+                            </div>
+                            <div class="welcome__partners-item swiper-slide">
+                                <img src="./images/partners/notion.svg" width="124" height="48" alt="">
+                            </div>
+                            <div class="welcome__partners-item swiper-slide">
+                                <img src="./images/partners/netflix.svg" width="124" height="48" alt="">
+                            </div>
+                            <div class="welcome__partners-item swiper-slide">
+                                <img src="./images/partners/zoom.svg" width="124" height="48" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -228,6 +249,7 @@
         </div>
     </dialog>
     <script src="js/menu-window.js"></script>
+    <script src="js/partners-slider.js"></script>
 </body>
 
 </html>
