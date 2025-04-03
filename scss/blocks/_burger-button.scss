@@ -1,0 +1,15 @@
+.burger-button {
+    @include square(48px);
+    @include flex-center;
+    flex-direction: column;
+    row-gap: 8px;
+
+    padding: 10px;
+
+    span:not(.visually-hidden) {
+        height: 2px;
+        width: 100%;
+        border-radius: 4px;
+        background-color: var(--c-black);
+    }
+}

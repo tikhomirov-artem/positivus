@@ -1,0 +1,12 @@
+.button {
+    @include flex-center(true);
+
+    height: var(--btn-height);
+    border-radius: var(--b-radius-m);
+    color: var(--c-light);
+    background-color: var(--c-dark);
+    padding-inline: 35px;
+    border: var(--border);
+    font-size: var(--fz-link);
+
+}

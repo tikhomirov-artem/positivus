@@ -1,11 +1,56 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Позитивус</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Positivus</title>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="header-inner container">
+            <a href="/" class="header__logo logo">
+                <img class="logo__image" width="220" height="36" src="images/logo.svg" alt="Positivus" loading="lazy">
+            </a>
+            <nav class="header__menu hidden-mobile">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">About us</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Services</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Use Cases</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Pricing</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+            <button type="button" class="header__button button button--transparent hidden-mobile">
+                Request a quote
+            </button>
+            <button type="button" class="header__burger-button burger-button visible-mobile">
+                <span class="visually-hidden">Open navigation menu</span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+    <dialog class="menu-window">
+        <div class="menu-window__inner container">
+            <form method="dialog" class="menu-window__close-wrapper">
+                <button class="menu-window__close-button button">
+                    close
+                </button>
+            </form>    
+        </div>
+    </dialog>
 </body>
 </html>
