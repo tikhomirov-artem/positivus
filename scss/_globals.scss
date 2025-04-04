@@ -17,18 +17,22 @@ svg * {
 
 h1, h2, h3, h4 {
     font-weight: 500;
-    line-height: 1.08;
+    line-height: 1.1;
 }
 
 h1 {
-    @include fluid-text(43, 60);
+    @include fluid-text(43, $fz-h1);
+
+    @include mobile-m {
+        @include fluid-text(38, $fz-h1);
+    }
 }
 h2 {
-    @include fluid-text(36, 40);
+    @include fluid-text(36, $fz-h2);
 }
 h3 {
-    @include fluid-text(26, 30);
+    @include fluid-text(26, $fz-h3);
 }
 h4 {
-    @include fluid-text(18, 20);
+    @include fluid-text(18, $fz-h4);
 }

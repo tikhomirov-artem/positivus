@@ -1,3 +1,5 @@
+$content-width: 531;
+
 .welcome {
     display: flex;
     flex-direction: column;
@@ -5,22 +7,62 @@
     &__main {
         display: flex;
         justify-content: space-between;
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        @include mobile-m {
+            align-items: stretch;
+        }
+    }
+    &__title {
+        @include fluid-width($fz-h1, $content-width);
+        
+        @include mobile {
+            order: -1;
+            margin-bottom: 10px;
+        }
     }
     &__content {
-        max-width: 531px;
+        max-width: #{$content-width}px;
         display: flex;
         flex-direction: column;
         row-gap: 35px;
         align-items: start;
+        @include mobile {
+            display: contents;
+        }
+    }
+    &__image {
+        max-height: fit-content;
+
+        @include desktop {
+            max-width: 40%;
+        }
+        @include mobile {
+            order: -1;
+            max-width: 100%;
+        }
     }
     &__description {
+        @include fluid-width($fz-h4, $content-width - 30);
+
         font-size: var(--fz-link);
+
+        @include desktop {
+            @include fluid-text(16, $fz-h4);
+        }
+        @include mobile {
+            max-width: 100%;
+            margin-bottom: 40px;
+        }
+        
     }
     &__partners {
         max-width: 100%;
         /*sas*/
         &-item {
-            max-width: fit-content;
+            max-width: 100%;
         }
     }
 }

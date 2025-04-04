@@ -1,3 +1,9 @@
+$layout-width: 1440;
+$fz-h1: 60;
+$fz-h2: 40;
+$fz-h3: 30;
+$fz-h4: 20;
+
 :root {
     /*colors*/
     --c-main: #B9FF66;
@@ -15,7 +21,6 @@
 
     --font-base: "Space Grotesk", sans-serif;
     --fz-link: 20px;
-    
     /*containers*/
     --container-width: 1340px;
     --container-padding-x: 20px;
@@ -29,5 +34,12 @@
 
     /*optimal transition-duration*/
     --trans-duration: 0.25s;
+    @include desktop {
+        --section-padding-y: 50px;
+    }
+    @include mobile {
+        --section-padding-y: 30px;
+    }
 
 }
+
