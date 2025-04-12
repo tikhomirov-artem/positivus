@@ -1,0 +1,49 @@
+.banner {
+    --padding: 60px;
+    --offsetBlock: 24px;
+    padding-block: var(--offsetBlock);
+
+    @include tablet {
+        --padding: 50px;
+        padding: unset;
+    }
+    @include mobile-m {
+        --padding: 38px;
+    }
+
+    &__inner {
+        background-color: var(--c-gray);
+        border-radius: var(--b-radius-l);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        padding-left: var(--padding);
+        @include tablet {
+            padding: var(--padding);
+        }
+      
+    }
+    &__body {
+        padding-block: var(--padding);
+        display: flex;
+        flex-direction: column;
+        row-gap: 26px;
+        align-items: flex-start;
+        @include tablet {
+            padding-block: 0;
+        }
+        @include mobile-m {
+            align-items: stretch;
+        }
+    }
+    &__description {
+        @include fluid-width($fz-p, 500)
+    }
+    &__image {
+        margin-block: calc(var(--offsetBlock) * -1);
+        @include tablet {
+            display: none;
+        }
+    }
+}

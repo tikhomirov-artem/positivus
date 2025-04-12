@@ -12,4 +12,8 @@
         color: var(--c-dark);
         background-color: transparent;
     }
+    @include hover {
+        background-color: var(--c-main);
+        color: var(--c-dark)
+    }
 }

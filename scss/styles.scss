@@ -1,3 +1,13 @@
 @import "normalize", "mixins", "media", "fonts", "variables", "utils", "globals";
 
-@import "blocks/buttons/button", "blocks/buttons/burger-button", "blocks/sections/section", "blocks/sections/welcome", "blocks/menu-window", "blocks/header";
+@import 
+    "blocks/buttons/button", 
+    "blocks/buttons/burger-button", 
+    "blocks/sections/section",
+    "blocks/sections/welcome", 
+    "blocks/menu-window", 
+    "blocks/header",
+    "blocks/puddle",
+    "blocks/service-card",
+    "blocks/sections/services",
+    "blocks/banner";
