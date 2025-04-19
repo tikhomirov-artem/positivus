@@ -63,10 +63,15 @@
             @include flex-center(true);
             @include square(41px);
 
+            transition: var(--trans-duration) rotate;
             border-radius: 50%;
             background-color: var(--c-dark);
+        }
 
-          
+        @include hover {
+            .service-card__link-icon-wrapper {
+                rotate: 29deg;
+            }
         }
     }
     &--green, &--black {

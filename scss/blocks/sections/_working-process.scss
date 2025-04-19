@@ -1,0 +1,87 @@
+.working-process {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        counter-reset: process-counter;
+        list-style: none;
+        @include mobile {
+            row-gap: 20px;
+        }
+    }
+    &__item {
+        counter-increment: process-counter;
+    }
+    &__accordion {
+        --indicatorOpenedRotate: 90deg;
+        transition: var(--trans-duration) background;
+        padding: 40px 60px;
+        background-color: var(--c-gray);
+        border-radius: var(--b-radius-l);
+        border: var(--border);
+        box-shadow: var(--shadowDown);
+
+        @include mobile {
+            padding: 30px;
+        }
+
+        &[open] {
+            --indicatorOpenedRotate: 0;
+            background-color: var(--c-main);
+        }
+
+        &:hover {
+            background-color: var(--c-main);
+        }
+
+        &-header {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-body {
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: var(--border);
+            max-width: 90%;
+        }
+        &-title {
+            display: flex;
+            align-items: center;
+            &::before {
+                content: "0" counter(process-counter);
+                font-size: 2em;
+                margin-right: 0.5em;
+            }
+
+            @include mobile {
+                font-size: 18px;
+            }
+        }
+        &-indicator {
+            --indicatorSize: 58px;
+            @include square(var(--indicatorSize));
+
+            position: relative;
+            background-color: var(--c-gray);
+            border-radius: 50%;
+            border: var(--border);
+
+            @include mobile {
+                --indicatorSize: 30px;
+            }
+
+            &::after,
+            &::before {
+                @include abs-center;
+                content: "";
+                width: 40%;
+                height: 12%;
+                background-color: var(--c-black);
+                transition: var(--trans-duration) rotate;
+            }
+            &::after {
+                rotate: var(--indicatorOpenedRotate);
+            }
+        }
+    }
+}
