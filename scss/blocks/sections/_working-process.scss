@@ -10,7 +10,11 @@
         }
     }
     &__item {
+        --customCounter: counter(process-counter);
         counter-increment: process-counter;
+        &:nth-child(-n + 9) {
+            --customCounter: "0" counter(process-counter);
+        }
     }
     &__accordion {
         --indicatorOpenedRotate: 90deg;
@@ -48,7 +52,7 @@
             display: flex;
             align-items: center;
             &::before {
-                content: "0" counter(process-counter);
+                content: var(--customCounter);
                 font-size: 2em;
                 margin-right: 0.5em;
             }

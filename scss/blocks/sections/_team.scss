@@ -1,0 +1,35 @@
+.team {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+    &__list {
+        @include grid(3);
+
+        @include desktop {
+            --gridColumns: 2;
+        }
+        @include mobile {
+            --gridColumns: 1;
+        }
+    }
+    &__item {
+        @include mobile {
+            &:nth-child(n + 4) {
+                display: none;
+            }
+        }
+    }
+    &__button {
+        width: 100%;
+        max-width: 269px;
+        align-self: flex-end;
+
+        @include mobile {
+            align-self: center;
+        }
+        @include mobile-m {
+            max-width: 100%;
+        }
+    }
+}

@@ -550,7 +550,11 @@ h4 {
   }
 }
 .working-process__item {
+  --customCounter: counter(process-counter);
   counter-increment: process-counter;
+}
+.working-process__item:nth-child(-n+9) {
+  --customCounter: "0" counter(process-counter);
 }
 .working-process__accordion {
   --indicatorOpenedRotate: 90deg;
@@ -588,7 +592,7 @@ h4 {
   align-items: center;
 }
 .working-process__accordion-title::before {
-  content: "0" counter(process-counter);
+  content: var(--customCounter);
   font-size: 2em;
   margin-right: 0.5em;
 }
@@ -624,6 +628,53 @@ h4 {
 }
 .working-process__accordion-indicator::after {
   rotate: var(--indicatorOpenedRotate);
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.team__list {
+  --gridColumns: 3;
+  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(var(--gridColumns), 1fr);
+}
+@media (max-width: 768px) {
+  .team__list {
+    gap: 30px;
+  }
+}
+@media (max-width: 1280px) {
+  .team__list {
+    --gridColumns: 2;
+  }
+}
+@media (max-width: 768px) {
+  .team__list {
+    --gridColumns: 1;
+  }
+}
+@media (max-width: 768px) {
+  .team__item:nth-child(n+4) {
+    display: none;
+  }
+}
+.team__button {
+  width: 100%;
+  max-width: 269px;
+  align-self: flex-end;
+}
+@media (max-width: 768px) {
+  .team__button {
+    align-self: center;
+  }
+}
+@media (max-width: 430px) {
+  .team__button {
+    max-width: 100%;
+  }
 }
 
 .menu-window {
@@ -923,6 +974,50 @@ h4 {
 }
 .service-card--black .service-card__link-icon-wrapper path {
   fill: currentColor;
+}
+
+.team-card {
+  border-radius: var(--b-radius-l);
+  border: var(--border);
+  box-shadow: var(--shadowDown);
+  padding: 40px 35px;
+  min-height: 330px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 28px;
+}
+.team-card__header {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+  padding-bottom: 28px;
+  border-bottom: var(--border);
+}
+.team-card__info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.team-card__person {
+  flex-shrink: 0;
+}
+.team-card__title {
+  font-size: clamp(18px, 1.3888888889vw, 20px);
+}
+.team-card__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+  aspect-ratio: 1;
+  align-self: flex-end;
+  border-radius: 50%;
+  background-color: var(--c-dark);
+}
+.team-card:nth-child(2n) {
+  display: none;
 }
 
 .services__list {
