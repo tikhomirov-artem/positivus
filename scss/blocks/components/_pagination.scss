@@ -1,0 +1,34 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    &__list {
+        display: flex;
+    }
+    &__item {
+        &-button {
+            color: var(--c-gray-lt);
+            transition: var(--trans-duration), color;
+
+            @include flex-center;
+            @include square(26px);
+        }
+        &--active {
+            button {
+                color: var(--c-main);
+            }
+        }
+    }
+    &__button {
+        @include square(40px);
+        @include flex-center;
+
+        border-radius: 50%;
+        background-color: transparent;
+        border: unset;
+        padding: unset;
+
+        color: var(--c-grey-alt);
+    }
+}

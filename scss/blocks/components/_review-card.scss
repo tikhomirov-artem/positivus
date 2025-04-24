@@ -1,0 +1,27 @@
+.review-card {
+    border-radius: var(--b-radius-l);
+    padding: 40px 50px;
+    background-color: var(--c-dark);
+    min-height: 327px;
+    color: var(--c-light);
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+
+    @include tablet {
+        padding: 40px;
+    }
+
+    &__author, &__company {
+        display: block
+    }
+    &__author {
+        color: var(--c-main);
+        @include fluid-text(18, $fz-h4);
+    }
+    &__company {
+        color: var(--c-grey-alt);
+    }
+
+
+}
