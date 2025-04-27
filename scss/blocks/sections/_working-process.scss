@@ -12,6 +12,7 @@
     &__item {
         --customCounter: counter(process-counter);
         counter-increment: process-counter;
+        
         &:nth-child(-n + 9) {
             --customCounter: "0" counter(process-counter);
         }

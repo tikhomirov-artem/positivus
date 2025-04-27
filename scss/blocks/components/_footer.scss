@@ -1,0 +1,110 @@
+.footer {
+    margin-top: calc(var(--section-padding-y) * 2);
+    background-color: var(--c-dark);
+    border-top-right-radius: var(--b-radius-l);
+    border-top-left-radius: var(--b-radius-l);
+    padding: 55px 60px;
+    color: var(--c-light);
+
+    @include tablet {
+        padding: 45px;
+    }
+
+    @include mobile {
+        border-top-right-radius: unset;
+        border-top-left-radius: unset;
+        padding: 50px 0;
+    }
+
+    &__inner {
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 30px;
+        }
+    }
+
+    &__logo {
+        @include mobile {
+            max-width: 140px;
+        }
+    }
+    &__menu-list {
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__header {
+        margin-bottom: 65px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 25px;
+        flex-wrap: wrap;
+
+        @include mobile {
+            display: contents;
+        }
+    }
+    &__bottom {
+        @include mobile {
+            order: 1;
+        }
+    }
+    &__socials {
+        &-list {
+            display: flex;
+            column-gap: 20px;
+            @include mobile {
+                order: 1;
+            }
+        }
+        &-link {
+            @include hover {
+                color: var(--c-main);
+            }
+            svg {
+                circle {
+                    fill: currentColor;
+                }
+            }
+        }
+        &-item:nth-child(2) {
+            svg {
+                path {
+                    fill: currentColor;
+                }
+            }
+        }
+    }
+
+    &__contacts {
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+        border-bottom: var(--border);
+        border-color: var(--c-light);
+        
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+        &-title {
+            @include fluid-text(18, $fz-h4);
+
+            display: inline-block;
+            margin-bottom: 1.5em;
+            color: var(--c-black);
+        }
+        &-info {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    }
+}

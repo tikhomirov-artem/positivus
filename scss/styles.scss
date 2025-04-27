@@ -1,4 +1,4 @@
-@import "normalize", "mixins", "media", "fonts", "variables", "utils", "globals";
+@import "normalize", "mixins", "media", "fonts", "variables", "utils", "globals", "animations";
 
 @import 
     "blocks/buttons/button", 
@@ -10,11 +10,15 @@
     "blocks/sections/team", 
     "blocks/sections/reviews", 
     "blocks/sections/services",
+    "blocks/sections/contact-us",
     "blocks/components/menu-window", 
+    "blocks/components/menu",
     "blocks/components/header",
+    "blocks/components/footer",
     "blocks/components/service-card",
     "blocks/components/team-card",
     "blocks/components/review-card",
     "blocks/components/banner",
     "blocks/components/pagination",
+    "blocks/components/field",
     "blocks/puddle";

@@ -22,7 +22,7 @@ $fz-p: 18;
     --b-radius-l: 45px;
 
     /*fonts*/
-    --font-base: "Space Grotesk", sans-serif;
+    --font-base: "Gilroy", sans-serif;
     --fz-link: 20px;
 
     /*containers*/
@@ -45,6 +45,7 @@ $fz-p: 18;
     }
     @include mobile {
         --section-padding-y: 30px;
+        --b-radius-l: 30px;
     }
 
 }

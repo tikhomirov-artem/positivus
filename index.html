@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="scss/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <script src="./js/swiper-bundle.min.js"></script>
-    <title>Positivus</title>
+    <script src="./js/aos.js"></script>
+    <title>Позитивус</title>
 </head>
 
 <body>
@@ -17,31 +19,31 @@
             <a href="/" class="header__logo logo">
                 <img class="logo__image" width="220" height="36" src="images/logo.svg" alt="Positivus" loading="lazy">
             </a>
-            <nav class="header__menu hidden-mobile">
-                <ul class="header__menu-list">
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link">About us</a>
+            <nav class="header__menu menu hidden-mobile">
+                <ul class="header__menu-list menu__list">
+                    <li class="header__menu-item menu__item">
+                        <a href="#" class="header__menu-link menu__link">О нас</a>
                     </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link">Services</a>
+                    <li class="header__menu-item menu__item">
+                        <a href="#" class="header__menu-link menu__link">Услуги</a>
                     </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link">Use Cases</a>
+                    <!-- <li class="header__menu-item menu__item">
+                        <a href="#" class="header__menu-link menu__link">Use Cases</a>
+                    </li> -->
+                    <li class="header__menu-item menu__item">
+                        <a href="#" class="header__menu-link menu__link">Цены</a>
                     </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link">Pricing</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link">Blog</a>
+                    <li class="header__menu-item menu__item">
+                        <a href="#" class="header__menu-link menu__link">Этапы работы</a>
                     </li>
                 </ul>
             </nav>
             <button type="button" class="header__button button button--transparent hidden-mobile">
-                Request a quote
+                Оставить заявку
             </button>
             <button id="menuWindowOpen" onclick="menuWindow.showModal()" type="button"
                 class="header__burger-button burger-button visible-mobile">
-                <span class="visually-hidden">Open navigation menu</span>
+                <span class="visually-hidden">Открыть навигационное меню</span>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -54,20 +56,21 @@
             <div class="section__body">
                 <div class="welcome container">
                     <div class="welcome__main">
-                        <div class="welcome__content">
-                            <h1 class="welcome__title">Navigating the digital landscape for success</h1>
+                        <div data-aos="fade-right" class="welcome__content">
+                            <h1 class="welcome__title">Добьёмся успеха в цифровом пространстве</h1>
                             <div class="welcome__description">
                                 <p>
-                                    Our digital marketing agency helps businesses grow and succeed online through a
-                                    range of services including SEO, PPC, social media marketing, and content creation.
+                                    Наше агентство цифрового маркетинга помогает компаниям расти и добиваться успеха в
+                                    Интернете с помощью целого ряда услуг, включая SEO, PPC, маркетинг в социальных
+                                    сетях и создание контента.
                                 </p>
                             </div>
                             <button type="button" class="welcome__button button">
-                                Book a consultation
+                                Заказать консультацию
                             </button>
                         </div>
-                        <svg class="welcome__image" width="601" height="515" viewBox="0 0 601 515" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg data-aos="fade-left" class="welcome__image" width="601" height="515" viewBox="0 0 601 515"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_332_1228)">
                                 <path
                                     d="M311.536 432.535L329.137 427.349L324.001 445L329.137 462.601L311.536 457.465L293.885 462.601L299.07 445L293.885 427.349L311.536 432.535Z"
@@ -220,23 +223,24 @@
         </section>
         <section class="section">
             <header class="section__header container">
-                <h2 class="section__title puddle">Services</h2>
+                <h2 class="section__title puddle">Услуги</h2>
                 <div class="section__description">
                     <p>
-                        At our digital marketing agency, we offer a range of services to help businesses grow and
-                        succeed online. These services include:
+                        Мы предлагаем широкий спектр услуг, помогающих бизнесу
+                        расти и
+                        добиваться успеха в Интернете.
                     </p>
                 </div>
             </header>
             <div class="section__body">
                 <div class="services container">
                     <ul class="services__list">
-                        <li class="services__item">
+                        <li data-aos="fade-right" class="services__item ">
                             <article class="service-card">
                                 <div class="service-card__body">
                                     <h3 class="service-card__title">
-                                        <span class="puddle">Search engine</span>
-                                        <span class="puddle">optimization</span>
+                                        <span class="puddle">Поисковая</span>
+                                        <span class="puddle">оптимизация (SEO)</span>
                                     </h3>
                                     <a href="/" class="service-card__link">
                                         <div class="service-card__link-icon-wrapper">
@@ -247,19 +251,19 @@
                                                     fill="#B9FF66" />
                                             </svg>
                                         </div>
-                                        <span>Learn more</span>
+                                        <span>Связаться</span>
                                     </a>
                                 </div>
                                 <img src="images/services/1.svg" class="service-card__image" width="210" height="170"
                                     alt="" loading="lazy">
                             </article>
                         </li>
-                        <li class="services__item">
+                        <li data-aos="fade-left" class="services__item">
                             <article class="service-card service-card--green">
                                 <div class="service-card__body">
                                     <h3 class="service-card__title">
-                                        <span class="puddle">Pay-per-click</span>
-                                        <span class="puddle">advertising</span>
+                                        <span class="puddle">Реклама</span>
+                                        <span class="puddle">с оплатой за клик</span>
                                     </h3>
                                     <a href="/" class="service-card__link">
                                         <div class="service-card__link-icon-wrapper">
@@ -270,19 +274,19 @@
                                                     fill="#B9FF66" />
                                             </svg>
                                         </div>
-                                        <span>Learn more</span>
+                                        <span>Связаться</span>
                                     </a>
                                 </div>
                                 <img src="images/services/2.svg" class="service-card__image" width="210" height="170"
                                     alt="" loading="lazy">
                             </article>
                         </li>
-                        <li class="services__item">
+                        <li data-aos="fade-right" class="services__item">
                             <article class="service-card service-card--black">
                                 <div class="service-card__body">
                                     <h3 class="service-card__title">
-                                        <span class="puddle">Social Media</span>
-                                        <span class="puddle">Marketing</span>
+                                        <span class="puddle">Медиа</span>
+                                        <span class="puddle">Маркетинг</span>
                                     </h3>
                                     <a href="/" class="service-card__link">
                                         <div class="service-card__link-icon-wrapper">
@@ -293,19 +297,19 @@
                                                     fill="#B9FF66" />
                                             </svg>
                                         </div>
-                                        <span>Learn more</span>
+                                        <span>Связаться</span>
                                     </a>
                                 </div>
                                 <img src="images/services/3.svg" class="service-card__image" width="210" height="170"
                                     alt="" loading="lazy">
                             </article>
                         </li>
-                        <li class="services__item">
+                        <li data-aos="fade-left" class="services__item">
                             <article class="service-card">
                                 <div class="service-card__body">
                                     <h3 class="service-card__title">
-                                        <span class="puddle">Email</span>
-                                        <span class="puddle">Marketing</span>
+                                        <span class="puddle">Почтовый</span>
+                                        <span class="puddle">Маркетинг</span>
                                     </h3>
                                     <a href="/" class="service-card__link">
                                         <div class="service-card__link-icon-wrapper">
@@ -316,19 +320,19 @@
                                                     fill="#B9FF66" />
                                             </svg>
                                         </div>
-                                        <span>Learn more</span>
+                                        <span>Связаться</span>
                                     </a>
                                 </div>
                                 <img src="images/services/4.svg" class="service-card__image" width="210" height="170"
                                     alt="" loading="lazy">
                             </article>
                         </li>
-                        <li class="services__item">
+                        <li data-aos="fade-right" class="services__item">
                             <article class="service-card service-card--green">
                                 <div class="service-card__body">
                                     <h3 class="service-card__title">
-                                        <span class="puddle">Content</span>
-                                        <span class="puddle">Creation</span>
+                                        <span class="puddle">Создание</span>
+                                        <span class="puddle">Контента</span>
                                     </h3>
                                     <a href="/" class="service-card__link">
                                         <div class="service-card__link-icon-wrapper">
@@ -339,19 +343,19 @@
                                                     fill="#B9FF66" />
                                             </svg>
                                         </div>
-                                        <span>Learn more</span>
+                                        <span>Связаться</span>
                                     </a>
                                 </div>
                                 <img src="images/services/5.svg" class="service-card__image" width="210" height="170"
                                     alt="" loading="lazy">
                             </article>
                         </li>
-                        <li class="services__item">
+                        <li data-aos="fade-left" class="services__item">
                             <article class="service-card service-card--black">
                                 <div class="service-card__body">
                                     <h3 class="service-card__title">
-                                        <span class="puddle">Analytics and </span>
-                                        <span class="puddle">Tracking</span>
+                                        <span class="puddle">Аналитика и</span>
+                                        <span class="puddle">Мониторинг</span>
                                     </h3>
                                     <a href="/" class="service-card__link">
                                         <div class="service-card__link-icon-wrapper">
@@ -362,7 +366,7 @@
                                                     fill="#B9FF66" />
                                             </svg>
                                         </div>
-                                        <span>Learn more</span>
+                                        <span>Связаться</span>
                                     </a>
                                 </div>
                                 <img src="images/services/6.svg" class="service-card__image" width="210" height="170"
@@ -370,20 +374,20 @@
                             </article>
                         </li>
                     </ul>
-                    <div class="services__banner banner">
+                    <div data-aos="fade-up" class="services__banner banner">
                         <div class="banner__inner">
                             <div class="banner__body">
                                 <h3 class="banner__title">
-                                    Let’s make things happen
+                                    Давайте сделаем это вместе!
                                 </h3>
                                 <div class="banner__description">
                                     <p>
-                                        Contact us today to learn more about how our digital marketing services can help
-                                        your business grow and succeed online.
+                                        Свяжитесь с нами сегодня, чтобы узнать о том, как наши услуги могут помочь
+                                        вашему бизнесу расти и добиваться успеха в Интернете.
                                     </p>
                                 </div>
                                 <button class="button">
-                                    Get your <span class="hidden-mobile">&nbsp;free&nbsp;</span> proposal
+                                    Получите <span class="hidden-mobile">&nbsp;бесплатную&nbsp;</span> консультацию
                                 </button>
                             </div>
                             <img class="banner__image" src="images/banner/decoration.svg" height="394" width="494"
@@ -395,10 +399,11 @@
         </section>
         <section class="section">
             <header class="section__header container">
-                <h2 class="section__title puddle">Case Studies</h2>
+                <h2 class="section__title puddle">Кому уже помогли</h2>
                 <div class="section__description">
                     <p>
-                        Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies
+                        Изучите реальные примеры успеха в цифровом маркетинге с помощью наших
+                        тематических исследований
                     </p>
                 </div>
             </header>
@@ -408,12 +413,12 @@
                         <li class="studies__item">
                             <div class="studies__description">
                                 <p>
-                                    For a local restaurant, we implemented a targeted PPC campaign that resulted in a
-                                    50% increase in website traffic and a 25% increase in sales.
+                                    Для местного ресторана мы внедрили целевую рекламную кампанию, которая привела к
+                                    увеличению посещаемости сайта на 50% и увеличению продаж на 25%.
                                 </p>
                             </div>
                             <div class="studies__link">
-                                <span>Learn more</span>
+                                <span>Узнать больше</span>
                                 <svg class="studies__link-icon" width="21" height="20" viewBox="0 0 21 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -425,12 +430,13 @@
                         <li class="studies__item">
                             <div class="studies__description">
                                 <p>
-                                    For a B2B software company, we developed an SEO strategy that resulted in a first
-                                    page ranking for key keywords and a 200% increase in organic traffic.
+                                    Для компании, занимающейся разработкой программного обеспечения для B2B, мы
+                                    разработали SEO-стратегию, что помогло ранжированию первой страницы по
+                                    ключевым словам и увеличению органического трафика на 200%.
                                 </p>
                             </div>
                             <div class="studies__link">
-                                <span>Learn more</span>
+                                <span>Узнать больше</span>
                                 <svg class="studies__link-icon" width="21" height="20" viewBox="0 0 21 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -442,12 +448,13 @@
                         <li class="studies__item">
                             <div class="studies__description">
                                 <p>
-                                    For a national retail chain, we created a social media marketing campaign that
-                                    increased followers by 25% and generated a 20% increase in online sales.
+                                    Для национальной розничной сети мы разработали маркетинговую кампанию в социальных
+                                    сетях, которая увеличила число подписчиков на 25% и привела к увеличению
+                                    онлайн-продаж на 20%.
                                 </p>
                             </div>
                             <div class="studies__link">
-                                <span>Learn more</span>
+                                <span>Узнать больше</span>
                                 <svg class="studies__link-icon" width="21" height="20" viewBox="0 0 21 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -463,22 +470,23 @@
         <section class="section">
             <header class="section__header container">
                 <h2 class="section__title">
-                    <span class="hidden-mobile puddle">Our Working Process</span>
+                    <span class="hidden-mobile puddle">Наши этапы работы</span>
                     <span class="visible-mobile">
-                        <span class="puddle">Our Working <br></span>
-                        <span class="puddle">Process</span>
+                        <span class="puddle">Наши этапы<br></span>
+                        <span class="puddle">работы</span>
                     </span>
                 </h2>
                 <div class="section__description">
                     <p>
-                        Step-by-Step Guide to. <br>Your Business Goals
+                        Пошаговое руководство по достижению.<br>
+                        Ваших бизнес-целей
                     </p>
                 </div>
             </header>
             <div class="section__body">
                 <div class="working-process container">
                     <ol class="working-process__list">
-                        <li class="working-process__item">
+                        <li data-aos="fade-right" class="working-process__item">
                             <details class="working-process__accordion">
                                 <summary class="working-process__accordion-header">
                                     <h3 class="working-process__accordion-title">
@@ -495,7 +503,7 @@
                                 </div>
                             </details>
                         </li>
-                        <li class="working-process__item">
+                        <li data-aos="fade-left" class="working-process__item">
                             <details class="working-process__accordion">
                                 <summary class="working-process__accordion-header">
                                     <h3 class="working-process__accordion-title">
@@ -512,7 +520,7 @@
                                 </div>
                             </details>
                         </li>
-                        <li class="working-process__item">
+                        <li data-aos="fade-right" class="working-process__item">
                             <details class="working-process__accordion">
                                 <summary class="working-process__accordion-header">
                                     <h3 class="working-process__accordion-title">
@@ -529,7 +537,7 @@
                                 </div>
                             </details>
                         </li>
-                        <li class="working-process__item">
+                        <li data-aos="fade-left" class="working-process__item">
                             <details class="working-process__accordion">
                                 <summary class="working-process__accordion-header">
                                     <h3 class="working-process__accordion-title">
@@ -546,7 +554,7 @@
                                 </div>
                             </details>
                         </li>
-                        <li class="working-process__item">
+                        <li data-aos="fade-right" class="working-process__item">
                             <details class="working-process__accordion">
                                 <summary class="working-process__accordion-header">
                                     <h3 class="working-process__accordion-title">
@@ -577,7 +585,7 @@
                 </div>
             </header>
             <div class="section__body">
-                <div class="team container">
+                <div data-aos="fade-up" class="team container">
                     <ul class="team__list">
                         <li class="team__item">
                             <article class="team-card">
@@ -898,7 +906,6 @@
                             </li>
                         </ul>
                     </div>
-
                     <div class="reviews__pagination pagination">
                         <button type="button" class="reviews-prev-button pagination__button button">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -909,57 +916,6 @@
                             </svg>
                         </button>
                         <ul class="pagination__list">
-                            <li class="pagination__item pagination__item--active">
-                                <button class="pagination__item-button">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7.0099 2.05941L14 0L11.9604 7.0099L14 14L7.0099 11.9604L0 14L2.05941 7.0099L0 0L7.0099 2.05941Z"
-                                            fill="#BDBDBD" />
-                                    </svg>
-                                </button>
-
-                            </li>
-                            <li class="pagination__item">
-                                <button class="pagination__item-button">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7.0099 2.05941L14 0L11.9604 7.0099L14 14L7.0099 11.9604L0 14L2.05941 7.0099L0 0L7.0099 2.05941Z"
-                                            fill="#BDBDBD" />
-                                    </svg>
-                                </button>
-                            </li>
-                            <li class="pagination__item">
-                                <button class="pagination__item-button">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7.0099 2.05941L14 0L11.9604 7.0099L14 14L7.0099 11.9604L0 14L2.05941 7.0099L0 0L7.0099 2.05941Z"
-                                            fill="#BDBDBD" />
-                                    </svg>
-                                </button>
-                            </li>
-                            <li class="pagination__item">
-                                <button class="pagination__item-button">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7.0099 2.05941L14 0L11.9604 7.0099L14 14L7.0099 11.9604L0 14L2.05941 7.0099L0 0L7.0099 2.05941Z"
-                                            fill="#BDBDBD" />
-                                    </svg>
-                                </button>
-                            </li>
-                            <li class="pagination__item">
-                                <button class="pagination__item-button">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7.0099 2.05941L14 0L11.9604 7.0099L14 14L7.0099 11.9604L0 14L2.05941 7.0099L0 0L7.0099 2.05941Z"
-                                            fill="#BDBDBD" />
-                                    </svg>
-                                </button>
-                            </li>
                         </ul>
                         <button type="button" class="pagination__button button reviews-next-button">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -974,7 +930,128 @@
 
             </div>
         </section>
+        <section class="section">
+            <header class="section__header container">
+                <h2 class="section__title puddle">Contact Us</h2>
+                <div class="section__description">
+                    <p>
+                        Connect with Us: Let's Discuss Your <br> Digital Marketing Needs
+                    </p>
+                </div>
+            </header>
+            <div class="section__body">
+                <div data-aos="fade-up" class="contact-us container">
+                    <div class="contact-us__body">
+                        <form action="" class="contact-us__form">
+                            <div class="contact-us__fields">
+                                <div class="contact-us__fields-item field">
+                                    <label class="field__label" for="contact-us-name">Name</label>
+                                    <input class="contact-us__input field__input" type="text" id="contact-us-name"
+                                        name="name" placeholder="Ivan">
+                                </div>
+                                <div class="contact-us__fields-item field">
+                                    <label class="field__label" for="contact-us-email">Email*</label>
+                                    <input required class="contact-us__input field__input" type="email"
+                                        inputmode="email" id="contact-us-email" name="email"
+                                        placeholder="ivan@gmail.com">
+                                </div>
+                                <div class="contact-us__fields-item field">
+                                    <label class="field__label" for="contact-us-message">Message*</label>
+                                    <textarea required class="contact-us__input field__input field__input--textarea"
+                                        name="contact-us-message" id="contact-us-message"
+                                        placeholder="Your message"></textarea>
+                                </div>
+                            </div>
+                            <button class="contact-us__button button" type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="footer__inner container">
+            <header class="footer__header">
+                <a href="/" class="footer__logo logo">
+                    <img class="logo__image" width="180" height="29" src="images/logo-white.svg" alt="Positivus"
+                        loading="lazy">
+                </a>
+                <nav class="footer__menu menu">
+                    <ul class="footer__menu-list menu__list">
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link menu__link">About us</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link menu__link">Services</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link menu__link">Use Cases</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link menu__link">Pricing</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link menu__link">Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="footer__socials-list">
+                    <li class="footer__socials-item">
+                        <a href="" class="footer__socials-link" target="_blank">
+                            <svg class="footer__socials-link-icon" width="30" height="30" viewBox="0 0 30 30"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="15" cy="15" r="15" fill="white" />
+                                <path d="M8.22178 22.0586H11.3059V12.0742H8.22178V22.0586Z" fill="black" />
+                                <path
+                                    d="M7.94141 8.88672C7.94141 9.87109 8.7358 10.668 9.76384 10.668C10.7451 10.668 11.5395 9.87109 11.5395 8.88672C11.5395 7.90234 10.7451 7.05859 9.76384 7.05859C8.7358 7.05859 7.94141 7.90234 7.94141 8.88672Z"
+                                    fill="black" />
+                                <path
+                                    d="M19.8106 22.0586H22.9414V16.5742C22.9414 13.9023 22.3339 11.793 19.2031 11.793C17.7078 11.793 16.6797 12.6367 16.2592 13.4336H16.2124V12.0742H13.2685V22.0586H16.3526V17.1367C16.3526 15.8242 16.5863 14.5586 18.2218 14.5586C19.8106 14.5586 19.8106 16.0586 19.8106 17.1836V22.0586Z"
+                                    fill="black" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__socials-item">
+                        <a href="" class="footer__socials-link" target="_blank">
+                            <svg class="footer__socials-link-icon" width="30" height="30" viewBox="0 0 30 30"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M30 15.0913C30 6.75456 23.2863 0 15 0C6.71371 0 0 6.75456 0 15.0913C0 22.6369 5.44355 28.9047 12.6411 30V19.4726H8.83064V15.0913H12.6411V11.8053C12.6411 8.03245 14.879 5.90264 18.2661 5.90264C19.9597 5.90264 21.6532 6.2069 21.6532 6.2069V9.91886H19.7782C17.9032 9.91886 17.2984 11.0751 17.2984 12.2921V15.0913H21.4718L20.8065 19.4726H17.2984V30C24.496 28.9047 30 22.6369 30 15.0913Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__socials-item">
+                        <a href="" class="footer__socials-link" target="_blank">
+                            <svg class="footer__socials-link-icon" width="30" height="30" viewBox="0 0 30 30"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="15" cy="15" r="15" fill="white" />
+                                <path
+                                    d="M21.9961 11.4915C22.6854 10.9745 23.3058 10.3541 23.7884 9.63028C23.168 9.90602 22.4442 10.1128 21.7204 10.1818C22.4786 9.73369 23.0301 9.04435 23.3058 8.18267C22.6165 8.59628 21.8238 8.90648 21.031 9.07881C20.3417 8.35501 19.4111 7.94141 18.3771 7.94141C16.378 7.94141 14.758 9.56135 14.758 11.5604C14.758 11.8362 14.7925 12.1119 14.8614 12.3876C11.8628 12.2153 9.1744 10.7677 7.38212 8.59628C7.07192 9.11328 6.89959 9.73369 6.89959 10.423C6.89959 11.6638 7.51999 12.7668 8.51953 13.4216C7.93359 13.3872 7.34766 13.2493 6.86512 12.9736V13.008C6.86512 14.7659 8.10593 16.2135 9.76034 16.5581C9.48461 16.6271 9.13994 16.696 8.82973 16.696C8.58847 16.696 8.38166 16.6615 8.1404 16.6271C8.58847 18.0747 9.93267 19.1087 11.5182 19.1432C10.2773 20.1082 8.72633 20.6942 7.03745 20.6942C6.72725 20.6942 6.45152 20.6597 6.17578 20.6252C7.76126 21.6592 9.65694 22.2452 11.725 22.2452C18.3771 22.2452 21.9961 16.7649 21.9961 11.974C21.9961 11.8017 21.9961 11.6638 21.9961 11.4915Z"
+                                    fill="black" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </header>
+            <div class="footer__contacts">
+                <h2 class="puddle footer__contacts-title">Contact us</h2>
+                <address class="footer__contacts-info">
+                    <p class="footer__contacts-item">
+                        Email: <a href="mailto:info@positivus.com">info@positivus.com</a>
+                    </p>
+                    <p class="footer__contacts-item">
+                        Address: 1234 Main St Moonstone City, Stardust State 12345
+                    </p>
+                </address>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2023 Positivus. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
     <dialog id="menuWindow" class="menu-window">
         <div class="menu-window__inner container">
             <div class="menu-window__close-wrapper">
@@ -1007,6 +1084,7 @@
     <script src="js/menu-window.js"></script>
     <script src="js/partners-slider.js"></script>
     <script src="js/reviews-slider.js"></script>
+    <script src="js/aos-init.js"></script>
 </body>
 
 </html>

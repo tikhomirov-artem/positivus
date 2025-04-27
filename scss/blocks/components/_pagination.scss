@@ -3,21 +3,20 @@
     justify-content: space-between;
     align-items: center;
     column-gap: 20px;
+
     &__list {
         display: flex;
+        justify-content: center
     }
     &__item {
-        &-button {
-            color: var(--c-gray-lt);
-            transition: var(--trans-duration), color;
+        @include flex-center;
+        @include square(26px);
 
-            @include flex-center;
-            @include square(26px);
-        }
+        color: var(--c-gray-lt);
+        transition: var(--trans-duration), color;
+
         &--active {
-            button {
-                color: var(--c-main);
-            }
+            color: var(--c-main);
         }
     }
     &__button {
